@@ -21,9 +21,8 @@ public abstract class CPlugin extends JavaPlugin {
     public void onEnable() {
         this.onPluginEnable();
 
-        if(!isVersionTested()) {
-
-        }
+        if (!isVersionTested())
+            this.logger.log(BukkitLogger.LogLevel.WARNING, "You are using the plugin on an untested server version! It is likely that you will encounter problems.");
     }
 
     @Override
@@ -32,38 +31,33 @@ public abstract class CPlugin extends JavaPlugin {
     }
 
     protected void onPluginEnable() {
-
     }
 
     protected void onPluginDisable() {
-
     }
 
     public PluginInformations getPluginInformations() {
         Class<?> clazz = this.getClass();
         if (!clazz.isAnnotationPresent(PluginInformations.class)) return null;
-
         return clazz.getAnnotation(PluginInformations.class);
     }
 
     private boolean isVersionTested() {
         PluginInformations pluginInformations = this.getPluginInformations();
-        if(pluginInformations == null)return true;
-        int serverVersion = ReflectionUtils.getServerVersionInteger();
+        if (pluginInformations == null) return true;
         List<TestedVersions> testedVersions = Arrays.asList(pluginInformations.testedVersions());
-
         return testedVersions.contains(TestedVersions.ALL)
                 || testedVersions.contains(TestedVersions.NONE)
                 || testedVersions.stream().filter(version -> version != TestedVersions.ALL &&
-                version != TestedVersions.NONE).anyMatch(version -> version.getIntegerVersion() == serverVersion);
+                version != TestedVersions.NONE).anyMatch(version -> version.getIntegerVersion() == ReflectionUtils.getServerVersionInteger());
 
     }
 
-    protected void setLogger(BukkitLogger logger) {
+    public void setLogger(BukkitLogger logger) {
         this.logger = logger;
     }
 
-    protected BukkitLogger getPluginLogger() {
+    public BukkitLogger getPluginLogger() {
         return this.logger;
     }
 
