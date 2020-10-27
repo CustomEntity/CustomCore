@@ -11,6 +11,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface PluginInformations {
 
-    TestedVersions[] testedVersion() default TestedVersions.NONE;
+    String name();
+
+    TestedVersions[] testedVersions() default TestedVersions.NONE;
 
 }

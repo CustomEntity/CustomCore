@@ -2,19 +2,18 @@ package fr.customentity.customcore.common;
 
 public enum TestedVersions {
 
-    NONE(),
-    VERSION_1_7,
-    VERSION_1_8,
-    VERSION_1_9,
-    VERSION_1_10,
-    VERSION_1_11,
-    VERSION_1_12,
-    VERSION_1_13,
-    VERSION_1_14,
-    VERSION_1_15,
-    VERSION_1_16,
+    NONE,
+    VER_1_7,
+    VER_1_8,
+    VE_1_9,
+    VER_1_10,
+    VER_1_11,
+    VER_1_12,
+    VER_1_13,
+    VER_1_14,
+    VER_1_15,
+    VER_1_16,
     ALL;
-
 
 
     public String getName() {
