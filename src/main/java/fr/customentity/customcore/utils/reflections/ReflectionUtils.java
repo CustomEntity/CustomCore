@@ -29,7 +29,6 @@ import javax.annotation.Nullable;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
-import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -158,6 +157,6 @@ public class ReflectionUtils {
      * @since 1.0.0
      */
     public static int getServerVersionInteger() {
-        return Integer.parseInt(VERSION.replace("_", ""));
+        return Integer.parseInt(VERSION.substring(1).replaceAll("_R\\d", "").replace("_", ""));
     }
 }

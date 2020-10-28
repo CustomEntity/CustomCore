@@ -5,6 +5,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.ConcurrentHashMap;
@@ -66,7 +67,7 @@ public class YamlResourceBundle {
     }
 
     public String getString(String path, boolean useCacheIfPresent) {
-        if(useCacheIfPresent)return cachedResourceContent.getOrDefault(path, yamlConfig.getStringList(path)).get(0);
+        if(useCacheIfPresent)return cachedResourceContent.getOrDefault(path, Collections.singletonList(yamlConfig.getString(path))).get(0);
         return yamlConfig.getString(path);
     }
 
