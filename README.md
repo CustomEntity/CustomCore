@@ -1,6 +1,6 @@
 ![Banner](https://i.imgur.com/kwKWKOZ.png)
 
-# CustomCore [![GitHub issues](https://img.shields.io/github/issues/CustomEntity/CustomCore)](https://github.com/CustomEntity/CustomCore/issues) [![GitHub forks](https://img.shields.io/github/forks/CustomEntity/CustomCore)](https://github.com/CustomEntity/CustomCore/network) [![GitHub stars](https://img.shields.io/github/stars/CustomEntity/CustomCore)](https://github.com/CustomEntity/CustomCore/stargazers) [![GitHub license][![GitHub license](https://img.shields.io/github/license/CustomEntity/CustomCore?color=GREEN)](https://github.com/CustomEntity/CustomCore/blob/master/LICENSE)
+# CustomCore [![GitHub issues](https://img.shields.io/github/issues/CustomEntity/CustomCore)](https://github.com/CustomEntity/CustomCore/issues) [![GitHub forks](https://img.shields.io/github/forks/CustomEntity/CustomCore)](https://github.com/CustomEntity/CustomCore/network) [![GitHub stars](https://img.shields.io/github/stars/CustomEntity/CustomCore?color=yellow)](https://github.com/CustomEntity/CustomCore/stargazers) [![GitHub license](https://img.shields.io/github/license/CustomEntity/CustomCore?color=GREEN)](https://github.com/CustomEntity/CustomCore/blob/master/LICENSE)
 
 Make it easy for you to create plugins using this [Core](https://github.com/CustomEntity/CustomCore/).
 
