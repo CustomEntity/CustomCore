@@ -29,3 +29,23 @@ CustomCore is currently in alpha. It is very likely that you will encounter bugs
 | MongoDB Utils | 🔨 |
 | SQLite Utils | 🔨 |
 | GSON Utils | 🔨 |
+
+### Gradle
+```gradle
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'fr.customentity:CustomCore:1.0-SNAPSHOT'
+}
+```
+
+### Maven
+```xml
+<dependency>
+  <groupId>fr.customentity</groupId>
+  <artifactId>CustomCore</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+```
